@@ -1,0 +1,325 @@
+<script>resizeTo(screen.availWidth, screen.availHeight);</script>
+
+<style>
+body{
+background-color:#FCC8A7;
+background-image: url('https://i.imgur.com/TPmCxXN.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:left !important; 
+background-size:contain;
+}
+
+::-webkit-scrollbar {width: 4px; height: 4px;}
+::-webkit-scrollbar-track {background: none;}
+::-webkit-scrollbar-thumb {background: #784458;}
+
+#gif1 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:20%;
+top:14.5%;
+left:68.5%;
+height:25%;
+background-image: url('https://i.imgur.com/o4LYVMY.gif') !important; 
+background-repeat:no-repeat !important; 
+background-position:right !important; 
+background-size:cover;
+}
+
+#gifoverlay {
+position:absolute;
+opacity:1;
+width:100%;
+height:100%;
+background-image: url('https://i.imgur.com/R620r70.gif') !important; 
+background-repeat:repeat !important; 
+background-position:right !important; 
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#gifoverlay:hover {
+opacity:0;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#gif2 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:20%;
+top:55%;
+left:68.5%;
+height:25%;
+background-image: url('https://i.imgur.com/NH1XOdb.gif') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+}
+
+#content {
+position:absolute;
+padding:2%;
+overflow:auto;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:15%;
+height:57%;
+top:14.5%;
+left:45%;
+color:#000000;
+font-size:1.5vh;
+font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#line {
+position:absolute;
+background:#000000;
+width:20.2%;
+height:0.5%;
+top:47.5%;
+left:68.5%;
+}
+
+#tabbox1 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:3%;
+height:6%;
+top:44.5%;
+left:69.5%;
+background-image: url('https://i.imgur.com/m52XKgl.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox2 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:3%;
+height:6%;
+top:44.5%;
+left:74.5%;
+background-image: url('https://i.imgur.com/wDwsA6C.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox3 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:3%;
+height:6%;
+top:44.5%;
+left:79.5%;
+background-image: url('https://i.imgur.com/BC1Ihvn.png') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox4 {
+position:absolute;
+border:2px solid #000000;
+background-color:#F8EDD4;
+width:3%;
+height:6%;
+top:44.5%;
+left:84.5%;
+background-image: url('https://i.imgur.com/wK2MN5h.jpg') !important; 
+background-repeat:no-repeat !important; 
+background-position:center !important; 
+background-size:cover;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tabbox1:hover,#tabbox2:hover,#tabbox3:hover,#tabbox4:hover {
+-webkit-transform: rotate(360deg);
+-moz-transform: rotate(360deg);
+-o-transform: rotate(360deg) ;
+-ms-transform: rotate(360deg);
+transform: rotate(360deg) ;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs {
+display:block;
+opacity:0;
+width:100%;
+height:100%;
+text-align:center;
+font-family: 'Abril Fatface', cursive;
+font-size:4.3vh;
+color:#000000;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+.tabs:hover {
+opacity:1;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+#tab1,#tab2,#tab3,#tab4 {
+display: none;
+}
+
+h1 {
+color:#784458;
+border-left: 10px solid #A4706D;
+border-right: 10px solid #A4706D;
+background-color: #BF8E7A;
+font-size:2vh;
+font-family: 'Abril Fatface', cursive;
+letter-spacing:5px;
+text-align:center;
+}
+
+b {
+color:#784458;
+font-family: 'Abril Fatface', cursive;
+}
+
+i {
+color:#666666;
+}
+
+a {
+color:#BF8E7A;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+
+a:hover {
+color:#8AAFDE;
+-webkit-transition: all 0.8s ease-out;
+-moz-transition: all 0.8s ease-out;
+transition: all 0.8s ease-out;
+}
+</style>
+
+<style type="text/css">* {cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur818.cur), auto !important;}</style>
+<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans+Narrow" rel="stylesheet">
+<script>function changeNavigation(id) {document.getElementById('content').innerHTML=document.getElementById(id).innerHTML}</script>
+
+<div id="content">
+<img style="width:100%;" src="https://i.imgur.com/FHIXHic.png"/>
+<h1>Author's Note</h1>
+Hello and welcome to my little profile! It's not much, but I personally enjoy it, and hope you will too. Firstly, and most importantly, I would like to clarify that only the code is of my creation, the wonderful artwork intergrated was not done by my hand.
+<br>
+Here are my sources:
+<li><a target="_blank" href="https://twitter.com/criisalys?lang=en">https://twitter.com/criisalys?lang=en</a></li>
+<li><a target="_blank" href="https://twitter.com/K3llyArt?lang=en">https://twitter.com/K3llyArt?lang=en</a></li>
+<li><a target="_blank" href="https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68346398">https://www.pixiv.net/member_illust.php?mode=medium&illust_id=68346398</a></li>
+<li><a target="_blank" href="https://www.pinterest.ca/pin/295759900524131627/">https://www.pinterest.ca/pin/295759900524131627/</a></li>
+<br><br>
+In addition, the music you are most likely listening to while reading this is certainly not mine either; it's <a target="_blank" href="https://www.youtube.com/watch?v=Lh5TsDBBDig">Baltimore Fireflies by Woodkid</a>.
+<br><br>
+The character you will see displayed across these pages was made for a very specific group role-play, but not to worry, I have plenty of others created for various settings. Unfortunately I do not role-play at all in private messages anymore, sorry for the inconvenience.
+<br><br>
+Are you interested in having a full profile coded up for <i>your</i> account? No problem, I take commissions! This template you see now isn't a very good example of my better and more in depth work, but if you'd like to have a look at some better ones just click this link: <a target="_blank" href="https://imgur.com/a/7Iq06Ol">https://imgur.com/a/7Iq06Ol</a>
+<br>
+I do charge for my time and effort, but only in bgs. My price is four separate bgs on accounts of my choice.
+<br><br>
+Thanks for taking the time to look at my profile, I'm always down for a laid back chat, don't be afraid to hit me up! If I'm not here you can most likely find me on the account <a target="_blank" href="http://fae.chatango.com">"Fae."</a>
+</div>
+
+<div id="gif1">
+<div id="gifoverlay"></div>
+</div>
+<div id="gif2">
+<div id="gifoverlay"></div>
+</div>
+
+<div id="line"></div>
+<div id="tabbox1">
+<span class="tabs" onClick="changeNavigation ('tab1')">I</span>
+</div>
+<div id="tabbox2">
+<span class="tabs" onClick="changeNavigation ('tab2')">II</span>
+</div>
+<div id="tabbox3">
+<span class="tabs" onClick="changeNavigation ('tab3')">III</span>
+</div>
+<div id="tabbox4">
+<span class="tabs" onClick="changeNavigation ('tab4')">IV</span>
+</div>
+
+<div id="tab1">
+<img style="height:30%;margin-left:30%;" src="https://i.imgur.com/pfKGrk9.png"/>
+<h1>The Pianist</h1>
+<b>Name:</b> Willow McCarthy<br>
+<b>Alias:</b> Fand<br>
+<b>Gender:</b> Female<br>
+<b>Age:</b> 16<br>
+<b>Nationality:</b> Irish<br>
+<b>Ethnicity:</b> Irish, English (U.K.)<br>
+<b>Height:</b> 165.1 cm (5’5”)<br>
+<b>Weight:</b> 110 lbs.<br>
+<b>School Year:</b> Third Year<br>
+<b>Weapon Choice:</b> Small Battleax (one handed)<br>
+<b>Secondary:</b> Crossbow<br>
+​<b>Affiliation:</b> Magic Base<br>
+<b>Element:</b> Wind(Garu)<br>
+<b>Club:</b> Phantom Detectives
+</div>
+
+<div id="tab2">
+<img style="height:30%;margin-left:20%;" src="https://i.imgur.com/AcaGD1L.png"/>
+<h1>Appearance</h1>
+Petite and slim are the proper terms to describe her physique. Willow is rather small in stature, only a handful of inches above five feet in height and weighing fairly little for someone her age. She is very slender, with her hourglass figure having just developed. The shape is there, but now her chest and rear have only just begun advancing into their proper stages of adulthood, making her quite the late bloomer. Some might assume her rounded face and full cheeks would only add to her more childish appearance, but it fits the rest of her features in a way that actually makes her at least look her age at face value. Full pink lips typically colored in some kind of shiny gloss, a cute button nose, and big dark brown eyes make up the most significant features of her face. From her head falls a curtain of light brown hair, dark enough to obviously be brown but still light enough to look golden under direct sunlight. It is naturally straight, left to grow out long save for the occasional trim, the only thing continuously cut short being her straight bangs.
+<br><br>
+Willow dresses primarily in casual clothing when not preparing for a special occasion or dressed in her new school’s official uniform. She prefers tank-tops and shorts during the warmer months, as well as t-shirts and jeans when it’s colder.
+<br><br>
+<img style="height:30%;margin-left:30%;" src="https://i.imgur.com/XHzuNtQ.png"/>
+<h1>Personality</h1>
+Chipper and generally outgoing; it is very likely for even complete strangers to see her with a bright smile on her face. Sometimes her optimism can be seen as naive, and even a little overwhelming, but regardless of the way people perceive her demeanor she still does her best to stay in a good mood and appreciate the best of a bad situation--if it can be merited as bad at all! Establishing a friendship with her is very easy, Willow finds herself trusting her peers with ease and often strives to establish some form of positive relationship with anyone who crosses her path.
+</div>
+
+<div id="tab3">
+<img style="height:30%;margin-left:27%;" src="https://i.imgur.com/wwGsH5T.png"/>
+<h1>Backstory</h1>
+Sean and Marianne McCarthy were typical folk; she was a British dame moving to a new country for a fresh start, and he was a handsome farmer. The pair met during a festival, and young love blossomed into marriage, then eventually a child. Willow McCarthy grew up tending to her father’s fields and animals in her downtime, every other moment of her day spent at school or on her studies. Her favorite subject, her absolute passion, was music. As it turned out, the newest addition to their family had quite the unexpected talent with piano keys. They fascinated her just as much as her skill enamored her family, causing the young soul to spend hours letting her fingers dance hauntingly over the keys. 
+<br><br>
+Willow was a very kindhearted individual, she made lots of friends her age, but simply couldn’t prioritize spending time with them. Like any other kid her age, she spent slow days in class staring off into the distance, dreaming about the chance to travel as a famous musician.
+<br><br>
+When the opportunity came for her to apply for a foreign exchange student program, and get into prestigious High Schools around the world, her parents encouraged her to take the opportunity. Willow felt hesitant, she loved her home and her family, never spending more than a week away from them in her entire life. The passion for her education and developing lifelong dream ended up driving her, as well as the sense of adventure that came with traveling. Through determination and hard work she managed to keep her grades up, and was even chosen for the program! From there it was off to Japan, country girl taking on the big city during her first baby steps into adulthood. It was time to embrace her buried wanderlust.
+</div>
+
+<div id="tab4">
+<h1>Ariel</h1>
+<img style="height:30%;" align="left" src="https://i.imgur.com/rKn7b8i.jpg"/>
+Willow’s base Persona manifests as an aerial sprite literally named Ariel. Sprites are impish nature spirits, sometimes classified as Fairies and other times considered Elves. Their racial classification isn’t really important, they all typically have domain over a singular earthly element, and in this case it is “air” or “wind.” Ariel is very small, standing only a foot and a half in height, and capable of fluttering quickly through the air on translucent bug-like wings. She is very brave, adventurous, and full of mischievous spunk. A prankster if given the chance, but at her base she still has a good nature.
+<br><br>
+<h1>Morgan Le Fay</h1>
+<img style="height:30%;" align="left" src="https://i.imgur.com/zexUgGy.jpg"/>
+It is possible for Ariel to undergo a major transformation, unlocking the next step in her master’s Persona evolution. This change makes her a true fairy, in this case bearing the name Morgan Le Fay. Upon achieving this state she grows to be the same height as Willow, similar in physique too, but with greyish purple skin, white hair, and glowing blue eyes. Rather than just a simple wind spirit, she graduates to a full blown sorceress. Morgan is a more mature version of Ariel, retaining some of her mischievous charm but applying it in far more subtle ways. She is reserved, almost cocky, and exceedingly stubborn, but not disobedient.
+</div>
+
+<embed style="height: 0%; width: 0%;"src="Willow.mp3" autostart="true" loop="true">
